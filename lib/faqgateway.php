@@ -1,5 +1,5 @@
 <?php
-class FAQGateway {
+class FaqGateway {
 	protected $db;
 
 	function __construct(PDO $db) {
@@ -9,7 +9,7 @@ class FAQGateway {
 	function fetchBySlug($slug) {
 		$statement = $this->db->prepare("select * from faq where slug = :slug");
 		$statement->execute(array(':slug' => $slug));
-		return new QA($statement->fetch(PDO::FETCH_ASSOC));
+		return new QuestionAnswer($statement->fetch(PDO::FETCH_ASSOC));
 	}
 
 	function all() {
@@ -18,7 +18,7 @@ class FAQGateway {
 		$result = array();
 
 		foreach ($statement as $row) {
-			$result[] = new QA($row);
+			$result[] = new QuestionAnswer($row);
 		}
 
 		return $result;

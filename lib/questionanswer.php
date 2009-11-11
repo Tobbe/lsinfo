@@ -1,5 +1,5 @@
 <?php
-class QA {
+class QuestionAnswer {
 	protected $row;
 
 	function __construct($row) {
