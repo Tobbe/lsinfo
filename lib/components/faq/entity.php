@@ -1,15 +1,15 @@
 <?php
 class components_faq_Entity extends k_Component {
-	protected $qa;
+	protected $questionAnswer;
 	protected $faq;
 
-	function __construct(FAQGateway $faq) {
+	function __construct(FaqGateway $faq) {
 		$this->faq = $faq;
 	}
 
 	function dispatch() {
-		$this->qa = $this->faq->fetchBySlug($this->name());
-		if (!$this->qa) {
+		$this->questionAnswer = $this->faq->fetchBySlug($this->name());
+		if (!$this->questionAnswer) {
 			throw new k_PageNotFound();
 		}
 
@@ -17,9 +17,9 @@ class components_faq_Entity extends k_Component {
 	}
 
 	function renderHtml() {
-		$this->document->setTitle($this->qa->question());
+		$this->document->setTitle($this->questionAnswer->question());
 		$t = new k_Template('templates/faq-entity.tpl.php');
-		return $t->render($this, array('qa' => $this->qa));
+		return $t->render($this, array('qa' => $this->questionAnswer));
 	}
 }
 ?>

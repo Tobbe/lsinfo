@@ -2,7 +2,7 @@
 class components_faq_List extends k_Component {
 	protected $faq;
 
-	function __construct(FAQGateway $faq) {
+	function __construct(FaqGateway $faq) {
 		$this->faq = $faq;
 	}
 
