@@ -22,8 +22,8 @@ class Article {
 		return $this->row['body'];
 	}
 
-	function date() {
-		return $this->row['date'];
+	function datetime($format) {
+		return date($format, strtotime($this->row['timestamp']));
 	}
 }
 ?>

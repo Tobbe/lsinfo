@@ -1,3 +1,3 @@
 <h2><?php e($article->title()); ?></h2>
-<h3><?php e($article->author()); ?> - <?php e($article->date()); ?></h3>
+<h3><?php e($article->author()); ?> - <?php e($article->datetime('D, d M Y - H:i')); ?></h3>
 <p><?php e($article->body()); ?></p>
