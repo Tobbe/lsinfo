@@ -19,7 +19,7 @@ class Article {
 	}
 
 	function body() {
-		return $this->row['body'];
+		return Markdown($this->row['body']);
 	}
 
 	function datetime($format) {
