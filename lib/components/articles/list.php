@@ -12,12 +12,7 @@ class components_articles_List extends k_Component {
 
 	function wrapHtml($content) {
 		$t = new k_Template('templates/articles-wrap.tpl.php');
-		return
-			$t->render(
-				$this,
-				array(
-					'content' => $content,
-					'url' => $this->url()));
+		return $t->render($this, array('content' => $content));
 	}
 
 	function renderHtml() {

@@ -23,5 +23,18 @@ class ArticlesGateway {
 
 		return $result;
 	}
+
+	function latest($count) {
+		$statement = $this->db->prepare("select * from articles limit :count");
+		$statement->bindValue(':count', $count, PDO::PARAM_INT);
+		$statement->execute();
+		$result = array();
+
+		foreach ($statement as $row) {
+			$result[] = new Article($row);
+		}
+
+		return $result;
+	}
 }
 ?>

@@ -1,0 +1,168 @@
+/**************************************
+  @auth: Darrin C. Roenfanz           *
+  @Version: 0.1                       *
+  @link: http://darrin.roenfanz.info  *
+  @date: 2008-10-20                   *
+**************************************/
+
+/* =HEADER
+-----------------------------------------------------------
+                                        Layout for: Head */
+#header {
+    background-color: #CDB;
+    border: 1px solid #666;
+    border-width: 1px 1px 0px 1px;
+    }
+#header h1   {
+    line-height: 0.8em;
+    padding: 40px 0 0 10px;
+    margin: 0;
+    }
+#header h1 a {
+    color: #231;
+    text-decoration: none;
+    }
+#header h1 span { font-weight: normal; color: #564; }
+
+/* =NAVIGATION/MENU
+-----------------------------------------------------------
+                                        Layout for: Menu */
+div#navigation {
+    background: #9A8;
+    overflow: hidden;
+    border: 1px solid #453;
+}
+
+div#navigation ul {
+    background: #9A8;
+    float: left;
+    font-size: 85%;
+    margin:0; padding:0;
+}
+
+div#navigation ul li {
+    display: inline;
+    margin: 0; padding:0;
+}
+
+div#navigation ul a:link,
+div#navigation ul a:visited {
+    background:#AB9;
+    border-right:1px solid #342;
+    color:#342;
+    float:left;
+    font:bold 1em/1em Verdana, Arial, Helvetica, sans-serif;
+    padding:20px 40px 4px 10px;
+    text-decoration:none;
+    text-transform:uppercase;
+    width:auto;
+}
+
+div#navigation ul a:hover {
+    background:#786;
+    color:#fff;
+}
+
+div#footer ul a:hover {
+    background: #9A8;
+}
+
+div#navigation ul .currentpage a,
+div#footer ul .currentpage a {
+    background: #675;
+    color: #fff;
+    text-shadow: none;
+}
+
+div#navigation ul a:active {
+    background:#786;
+    color:#fff;
+}
+
+#top {border-bottom: 3px solid #564; }
+
+/* =FEEDS: BOTTOM
+-----------------------------------------------------------
+                                        Layout for: FEED */
+
+#innercontent {
+    margin: 2.3em;
+    }
+#innercontent h2{
+    margin: 0;
+    color: #444444;
+    padding: 0.2em 0 0.1em 30px;
+    background-color: #f7f7f7;
+    background-position: 0.35em 50%;
+    }
+#innercontent p{
+    margin: 0.2em 0 2.5em 30px;
+    color: #333;
+    }
+
+
+/* =FEEDS: BOTTOM
+-----------------------------------------------------------
+                                        Layout for: FEED */
+#bottom-wrapper {border-top: 3px solid #453; }
+
+#bottom {
+    background-color: #CDB;
+    border: 1px solid #231;
+    overflow: hidden;
+    padding: 1.3em;
+    clear: both;
+    }
+div.box {
+    background-color: #9A8;
+    width: 34%;
+    float: left;
+    }
+div#centerbox { width: 32%; }
+div#centerbox div { margin: 0.6em 0; }
+
+div.box h2 {
+    margin: 0 0 0.3em 0;
+    border-bottom: 2px solid #453;
+    color: #453;
+    }
+div.box div {
+    background-color: #FFF;
+    margin: 0.6em;
+    padding: 0.6em 1.2em 1.1em 1.2em;
+    list-style: none;
+    border: 1px solid #453;
+    border-top-width: 2px;
+    }
+div.box ul.feeds {
+    list-style-type: none;
+    padding: 0; margin: 0;
+    font-size: 0.9em;
+    }
+div.box ul li {
+    line-height: 1em;
+    margin-bottom: 1px;
+    padding: 0.4em 0;
+    }
+#bottom .feeds li a{
+    color: #453;
+    text-decoration: none;
+    }
+
+/* =FOOTER
+-----------------------------------------------------------
+                                        Layout for: FOOT */
+#footer {
+    background-color: #564;
+    border: 1px solid #231;
+    border-top: 0;
+    overflow: hidden;
+    padding: 0.4em;
+    color: #FFF;
+}
+#footer a { color: #FFF; text-decoration: none; }
+#footer p { display: inline; float: right;  margin: 0.5em; padding: 2px 1em;}
+#footer ul { text-decoration: none; float: left; margin: 0.5em; padding: 0;}
+#footer ul li { text-decoration: none; display: inline; float: left;}
+#footer ul a { display: block; padding: 2px 0.5em;}
+
