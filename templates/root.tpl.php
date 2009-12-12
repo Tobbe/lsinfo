@@ -46,7 +46,9 @@
 			<div>
 				<h2>LSP rss feed</h2>
 				<ul class="feeds">
-					<li><a href="#">This is a feed item.</a></li>
+					<?php foreach ($lsprssitems as $lsprssitem): ?>
+						<li><a href="<?php e($lsprssitem->link); ?>"><?php e($lsprssitem->title); ?> (<?php e(date("Y-m-d", strtotime($lsprssitem->pubDate))); ?>)</a></li>
+					<?php endforeach; ?>
 				</ul>
 			</div>
 		</div>
