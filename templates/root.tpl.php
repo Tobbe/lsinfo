@@ -25,7 +25,7 @@
 				<h2>Latest Articles (at most five)</h2>
 				<ul class="feeds">
 					<?php foreach ($latestarticles as $article): ?>
-						<li><a href="<?php e(url($article->slug())); ?>"><?php e($article->title()); ?> (<?php e($article->author()); ?>/<?php e($article->datetime(DATE_RSS)); ?>)</a></li>
+						<li><a href="<?php e(url(array('articles', $article->slug()))); ?>"><?php e($article->title()); ?> (<?php e($article->author()); ?>/<?php e($article->datetime(DATE_RSS)); ?>)</a></li>
 					<?php endforeach; ?>
 				</ul>
 			</div>
